@@ -1,0 +1,1274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen: Circunstancias Agravantes - Derecho Penal II</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.95;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .intro-box {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .intro-box h2 {
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        
+        .intro-box ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .intro-box li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .intro-box li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        
+        .agravante-card {
+            background: #fff;
+            border-left: 5px solid #667eea;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .agravante-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        
+        .agravante-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+            display: flex;
+            align-items: center;
+        }
+        
+        .numero-agravante {
+            background: #667eea;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-right: 15px;
+            font-size: 0.9em;
+        }
+        
+        .definicion {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+            border-left: 3px solid #28a745;
+        }
+        
+        .definicion strong {
+            color: #28a745;
+        }
+        
+        .elementos-box {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .elementos-box h4 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .elementos-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .elementos-list li {
+            padding: 8px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .elementos-list li:before {
+            content: "▸";
+            position: absolute;
+            left: 10px;
+            color: #ffc107;
+            font-weight: bold;
+        }
+        
+        .importante {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .importante h4 {
+            color: #155724;
+            margin-bottom: 10px;
+        }
+        
+        .advertencia {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 15px 0;
+        }
+        
+        .advertencia h4 {
+            color: #721c24;
+            margin-bottom: 10px;
+        }
+        
+        .ejemplo {
+            background: #e7f3ff;
+            border-left: 4px solid #007bff;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .ejemplo strong {
+            color: #007bff;
+        }
+        
+        .tab-section {
+            margin: 30px 0;
+        }
+        
+        .tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .tab-button {
+            padding: 12px 25px;
+            background: #e9ecef;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: all 0.3s;
+        }
+        
+        .tab-button.active {
+            background: #667eea;
+            color: white;
+        }
+        
+        .tab-button:hover {
+            background: #764ba2;
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.8em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .agravante-card h3 {
+                font-size: 1.2em;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .numero-agravante {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>⚖️ Circunstancias Agravantes</h1>
+            <p>Derecho Penal II - Parte General y Especial</p>
+        </header>
+        
+        <div class="content">
+            <!-- Introducción -->
+            <div class="intro-box">
+                <h2>📌 Concepto General</h2>
+                <p><strong>Las circunstancias agravantes</strong> están reguladas en el <strong>Art. 12 del Código Penal</strong></p>
+                <ul>
+                    <li><strong>Numerus clausus:</strong> Solo existen las establecidas en la ley</li>
+                    <li><strong>Principio de legalidad:</strong> No se pueden crear agravantes por analogía</li>
+                    <li>Agravan la responsabilidad penal cuando concurren en el delito</li>
+                </ul>
+            </div>
+
+            <!-- AGRAVANTE N°1 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°1</span>
+                    ALEVOSÍA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometer el delito contra las personas con alevosía, entendiéndose que la hay cuando se obra a traición o sobreseguro"
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'alevosia-formas')">Formas de Alevosía</button>
+                        <button class="tab-button" onclick="openTab(event, 'alevosia-caracteristicas')">Características</button>
+                        <button class="tab-button" onclick="openTab(event, 'alevosia-importante')">Puntos Importantes</button>
+                    </div>
+                    
+                    <div id="alevosia-formas" class="tab-content active">
+                        <div class="elementos-box">
+                            <h4>🔹 1. A TRAICIÓN</h4>
+                            <ul class="elementos-list">
+                                <li><strong>Ocultando la intención hostil</strong></li>
+                                <li>Simulando amistad o disimulando enemistad</li>
+                                <li>Aprovechamiento de la confianza que la víctima ha depositado en el autor</li>
+                                <li>O confianza que el autor se ha ganado con ese propósito</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="elementos-box">
+                            <h4>🔹 2. SOBRESEGURO</h4>
+                            <ul class="elementos-list">
+                                <li><strong>Ocultando el cuerpo del autor</strong></li>
+                                <li><strong>Ocultando los medios comisivos</strong> (armas, instrumentos)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="importante">
+                            <h4>🎯 OBJETIVO COMÚN</h4>
+                            <p>En ambas formas, el propósito es <strong>provocar la indefensión de la víctima</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div id="alevosia-caracteristicas" class="tab-content">
+                        <div class="importante">
+                            <h4>✓ Ámbito de Aplicación</h4>
+                            <ul class="elementos-list">
+                                <li>Opera <strong>SOLO en delitos contra las personas</strong></li>
+                                <li>Salvo que haya expresa disposición legal en contrario</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="importante">
+                            <h4>✓ Elemento Subjetivo</h4>
+                            <p>El agente debe actuar con el <strong>propósito deliberado</strong> de aprovechar la situación en que se encuentra la víctima o en la que la ha colocado</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong> Concurre alevosía si se aleja a la criada que cuida al niño, o al lazarillo que guía al ciego, para luego atacar a la víctima indefensa.
+                        </div>
+                    </div>
+                    
+                    <div id="alevosia-importante" class="tab-content">
+                        <div class="advertencia">
+                            <h4>⚠️ Naturaleza Personal</h4>
+                            <p>Es una <strong>circunstancia personal</strong>, por lo tanto:</p>
+                            <ul class="elementos-list">
+                                <li><strong>NO se comunica</strong> a quienes no han concurrido en ella</li>
+                                <li>Relacionado con Art. 64 CP (comunicabilidad de circunstancias)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="importante">
+                            <h4>📚 Relación con otras normas</h4>
+                            <ul class="elementos-list">
+                                <li><strong>Art. 391 N°1 CP:</strong> Como calificante del homicidio</li>
+                                <li><strong>Art. 63 CP:</strong> Regla sobre circunstancias inherentes al delito</li>
+                                <li><strong>Art. 64 CP:</strong> Comunicabilidad de circunstancias</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- AGRAVANTE N°2 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°2</span>
+                    PRECIO, RECOMPENSA O PROMESA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometerlo mediante precio, recompensa o promesa"
+                </div>
+                
+                <div class="importante">
+                    <h4>👥 Presupone la intervención de 2 personas</h4>
+                    <ul class="elementos-list">
+                        <li><strong>Un inductor:</strong> quien ofrece el precio, recompensa o promesa</li>
+                        <li><strong>Un autor material:</strong> quien ejecuta el delito a cambio de ello</li>
+                    </ul>
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 Conceptos Clave</h4>
+                    <ul class="elementos-list">
+                        <li><strong>PRECIO:</strong> Valor pecuniario (dinero) en que se estima un servicio</li>
+                        <li><strong>RECOMPENSA:</strong> Cualquier otro premio distinto al dinero</li>
+                        <li><strong>PROMESA:</strong> Ofrecimiento de otorgar más adelante precio o recompensa</li>
+                    </ul>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚖️ Aplicación a Ambos Sujetos</h4>
+                    <p>La agravante se aplica tanto al <strong>inductor</strong> como al <strong>autor material</strong></p>
+                    <p>La expresión legal "<strong>mediante</strong>" indica que ambos participan de la agravante</p>
+                </div>
+                
+                <div class="importante">
+                    <h4>📌 Naturaleza</h4>
+                    <p>Es una <strong>circunstancia personal</strong> → <strong>NO se comunica</strong> a otros partícipes</p>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°3 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°3</span>
+                    MEDIOS CATASTRÓFICOS
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Ejecutar el delito por medio de inundación, incendio, veneno u otro artificio que pueda ocasionar grandes estragos o dañar a otras personas"
+                </div>
+                
+                <div class="importante">
+                    <h4>⚠️ Fundamento</h4>
+                    <p><strong>Peligro para la seguridad general</strong> que deriva de la naturaleza de los medios empleados</p>
+                    <ul class="elementos-list">
+                        <li>Los medios se utilizan <strong>para cometer</strong> el delito</li>
+                        <li><strong>NO</strong> para encubrirlo después</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'medios-tipos')">Tipos de Medios</button>
+                        <button class="tab-button" onclick="openTab(event, 'medios-requisitos')">Requisitos</button>
+                        <button class="tab-button" onclick="openTab(event, 'medios-excepciones')">Excepciones</button>
+                    </div>
+                    
+                    <div id="medios-tipos" class="tab-content active">
+                        <div class="elementos-box">
+                            <h4>🌊 INUNDACIÓN</h4>
+                            <p>Anegamiento de grandes proporciones</p>
+                        </div>
+                        
+                        <div class="elementos-box">
+                            <h4>🔥 INCENDIO</h4>
+                            <p>Destrucción mediante el fuego que se vuelve <strong>incontrolable</strong></p>
+                        </div>
+                        
+                        <div class="elementos-box">
+                            <h4>☠️ VENENO</h4>
+                            <ul class="elementos-list">
+                                <li>Se administra de forma <strong>insidiosa</strong> (oculta, engañosa)</li>
+                                <li>Crea peligro para la salud o vida de un <strong>número indeterminado de personas</strong></li>
+                                <li>Según Cury: el peligro debe ser general, no solo para la víctima específica</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="elementos-box">
+                            <h4>⚙️ OTRO ARTIFICIO</h4>
+                            <p><strong>Cláusula analógica:</strong> cualquier otro medio similar que pueda ocasionar grandes estragos</p>
+                            <div class="ejemplo">
+                                <strong>📝 Ejemplos:</strong> Explosivos, derrumbes provocados, liberación de gases tóxicos, etc.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="medios-requisitos" class="tab-content">
+                        <div class="importante">
+                            <h4>✓ Solo se requiere la POSIBILIDAD de daño</h4>
+                            <p><strong>NO es necesario</strong> que los daños se produzcan efectivamente</p>
+                            <p>Basta con que el medio empleado <strong>pueda ocasionar</strong> grandes estragos o dañar a otras personas</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong> Se coloca una bomba en un edificio para matar a una persona específica. Aunque solo muera esa persona, concurre la agravante porque el medio (bomba) podía ocasionar grandes estragos.
+                        </div>
+                    </div>
+                    
+                    <div id="medios-excepciones" class="tab-content">
+                        <div class="advertencia">
+                            <h4>🚫 NO concurre la agravante cuando:</h4>
+                            <p>Si la utilización del medio es <strong>constitutiva de delito en sí misma</strong></p>
+                            <p><strong>Razón:</strong> Concurso de leyes (Art. 63 CP)</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo de NO aplicación:</strong>
+                            <p>Si alguien comete el delito específico de "incendio" (Art. 474 y ss. CP), NO se aplica además esta agravante, porque el incendio ya es el delito mismo y no una circunstancia agravante.</p>
+                            <p>Sería una doble valoración del mismo hecho (vulneraría el principio <em>non bis in idem</em>)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°4 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°4</span>
+                    ENSAÑAMIENTO
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Aumentar deliberadamente el mal del delito causando otros males innecesarios para su ejecución"
+                </div>
+                
+                <div class="importante">
+                    <h4>🎯 Elementos del Ensañamiento</h4>
+                    <ul class="elementos-list">
+                        <li><strong>Aumentar DELIBERADAMENTE:</strong> con intención, a propósito</li>
+                        <li><strong>El mal del delito:</strong> más allá de lo necesario</li>
+                        <li><strong>Causando males INNECESARIOS:</strong> sufrimientos adicionales</li>
+                    </ul>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚖️ Diferencia con el Homicidio Calificado</h4>
+                    <p>El baremo de esta agravante es <strong>INFERIOR</strong> a la circunstancia calificante del homicidio:</p>
+                    <ul class="elementos-list">
+                        <li><strong>Art. 391 N°1:</strong> "aumentar deliberada e <strong>inhumanamente</strong> el dolor del ofendido"</li>
+                        <li>Requiere crueldad extrema, torturas a la víctima</li>
+                    </ul>
+                </div>
+                
+                <div class="ejemplo">
+                    <strong>📝 Ejemplo de NO aplicación:</strong>
+                    <p>No concurre ensañamiento si mata a palos y es la <strong>única forma</strong> que tiene de hacerlo (por ejemplo, no tiene otra arma disponible)</p>
+                    <p><strong>Razón:</strong> Los golpes no son "innecesarios" si son el único medio disponible</p>
+                </div>
+                
+                <div class="importante">
+                    <h4>🔄 Relación entre agravante y calificante</h4>
+                    <p><strong>Si NO concurre la calificante del Art. 391 N°1</strong> (porque no hay suficiente crueldad/inhumanidad), <strong>podría concurrir esta agravante</strong> del Art. 12 N°4</p>
+                    <p>Es una aplicación subsidiaria o de menor intensidad</p>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°5 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°5</span>
+                    PREMEDITACIÓN CONOCIDA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "En los delitos contra las personas, obrar con premeditación conocida"
+                </div>
+                
+                <div class="importante">
+                    <h4>📊 Ámbito de Aplicación</h4>
+                    <p><strong>SOLO</strong> en delitos contra las personas</p>
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'premed-concepto')">Concepto</button>
+                        <button class="tab-button" onclick="openTab(event, 'premed-elementos')">Elementos</button>
+                        <button class="tab-button" onclick="openTab(event, 'premed-distincion')">Distinción Importante</button>
+                    </div>
+                    
+                    <div id="premed-concepto" class="tab-content active">
+                        <div class="elementos-box">
+                            <h4>🧠 ¿Qué es la Premeditación?</h4>
+                            <p>Implica dos fases cronológicas:</p>
+                            <ul class="elementos-list">
+                                <li><strong>1. Reflexión previa</strong> a la decisión
+                                    <ul style="margin-left: 20px; margin-top: 5px;">
+                                        <li>Se ponderan ventajas y desventajas</li>
+                                        <li>Se piensa sobre las consecuencias</li>
+                                    </ul>
+                                </li>
+                                <li><strong>2. Persistencia firme</strong> de la resolución ya adoptada
+                                    <ul style="margin-left: 20px; margin-top: 5px;">
+                                        <li>Ya NO hay vacilaciones</li>
+                                        <li>Ya NO se reflexiona más (eso fue antes)</li>
+                                        <li>Se mantiene la decisión tomada</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="premed-elementos" class="tab-content">
+                        <div class="importante">
+                            <h4>✓ Requisitos de la Premeditación</h4>
+                            <ul class="elementos-list">
+                                <li><strong>Espacio temporal suficiente</strong> para:
+                                    <ul style="margin-left: 20px; margin-top: 5px;">
+                                        <li>La reflexión previa</li>
+                                        <li>Poner de manifiesto que la decisión NO será afectada por contramotivos</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="advertencia">
+                            <h4>⚠️ PREMEDITACIÓN "CONOCIDA"</h4>
+                            <p><strong>Debe probarse en el juicio</strong></p>
+                            <p><strong>NO puede presumirse</strong> por el solo hecho de que transcurra cierto plazo entre la decisión y la realización del hecho</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong>
+                            <p><strong>HAY premeditación:</strong> Juan decide matar a Pedro. Durante una semana planifica cómo hacerlo, estudia sus horarios, compra un arma, prepara una coartada. Finalmente lo ejecuta. Hay reflexión previa + persistencia en la decisión.</p>
+                            <p><strong>NO hay premeditación:</strong> Juan decide matar a Pedro en un arrebato de ira y lo ejecuta inmediatamente. No hay tiempo para reflexión ni persistencia.</p>
+                        </div>
+                    </div>
+                    
+                    <div id="premed-distincion" class="tab-content">
+                        <div class="advertencia">
+                            <h4>🚫 NO confundir con:</h4>
+                            <ul class="elementos-list">
+                                <li><strong>Resolución:</strong> Simple decisión de cometer el delito</li>
+                                <li><strong>Determinación:</strong> Firmeza en ejecutar lo decidido</li>
+                            </ul>
+                            <p style="margin-top: 10px;">La premeditación requiere <strong>reflexión previa + persistencia temporal</strong>, no solo decidirse a actuar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°6 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°6</span>
+                    ABUSO DE SUPERIORIDAD
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Abusar el delincuente de la superioridad de su sexo, o de sus fuerzas, en términos que el ofendido no pudiera defenderse con probabilidades de repeler la ofensa"
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 Concepto Clave</h4>
+                    <p><strong>ABUSAR:</strong> Servirse o valerse de la superioridad</p>
+                    <p>El agente aprovecha conscientemente su ventaja física sobre la víctima</p>
+                </div>
+                
+                <div class="importante">
+                    <h4>✓ Elementos de la Agravante</h4>
+                    <ul class="elementos-list">
+                        <li><strong>Superioridad del sexo</strong> (históricamente hombre sobre mujer, aunque discutible hoy)</li>
+                        <li><strong>O superioridad de fuerzas</strong> (fuerza física claramente superior)</li>
+                        <li>Que el ofendido <strong>NO pueda defenderse con probabilidades</strong> de repeler la ofensa</li>
+                        <li>Que el agente <strong>abuse</strong> (se aproveche) de esa superioridad</li>
+                    </ul>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚠️ Incompatibilidad con Alevosía</h4>
+                    <p>Esta agravante es <strong>INCOMPATIBLE</strong> con la alevosía (Art. 12 N°1)</p>
+                    <p><strong>Razón:</strong> Ambas tienen el mismo fundamento (aprovecharse de la indefensión de la víctima)</p>
+                    <p>Aplicar ambas violaría el principio <em>non bis in idem</em></p>
+                </div>
+            </div><!-- AGRAVANTE N°7 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°7</span>
+                    ABUSO DE CONFIANZA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometer el delito con abuso de confianza"
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 ¿Qué es la "Confianza"?</h4>
+                    <p>La ley reconoce <strong>dos sentidos</strong>:</p>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>1️⃣ Sentido Jurídico-Contractual:</strong>
+                        <ul class="elementos-list">
+                            <li>Fe depositada en otra persona con la que existen ciertos lazos</li>
+                            <li><strong>Ejemplos:</strong> Mandantes y mandatarios, socios en una empresa, tutor y pupilo</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>2️⃣ Sentido de Familiaridad:</strong>
+                        <ul class="elementos-list">
+                            <li>Relaciones de familia</li>
+                            <li>Relaciones de amistad</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="importante">
+                    <h4>✓ Requisito Esencial</h4>
+                    <p>El quebrantamiento de la confianza debe haber <strong>contribuido</strong> con la realización del hecho</p>
+                    <p>No basta que exista confianza, el agente debe <strong>abusar de ella</strong> (servirse de ella) para perpetrar el delito</p>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>🚫 NO es aplicable cuando:</h4>
+                    <p>El abuso de confianza es <strong>inherente al delito</strong> (forma parte de su estructura típica)</p>
+                    <div class="ejemplo">
+                        <strong>📝 Ejemplos de NO aplicación:</strong>
+                        <ul class="elementos-list">
+                            <li><strong>Apropiación indebida:</strong> Requiere que se tenga la cosa en depósito/confianza</li>
+                            <li><strong>Hurto calificado:</strong> Cuando se abusa de confianza o facilidades del oficio</li>
+                            <li><strong>Violación de secretos:</strong> Presupone una relación de confianza</li>
+                        </ul>
+                        <p style="margin-top: 10px;"><strong>Razón:</strong> Sería doble valoración del mismo elemento (non bis in idem)</p>
+                    </div>
+                </div>
+                
+                <div class="importante">
+                    <h4>📌 Naturaleza</h4>
+                    <p>Es una <strong>circunstancia subjetiva</strong> → <strong>NO se comunica</strong> a los partícipes</p>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°10 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°10</span>
+                    APROVECHAMIENTO DE CALAMIDAD
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometer el delito con ocasión de incendio, naufragio, sedición, tumulto o conmoción popular u otra calamidad o desgracia"
+                </div>
+                
+                <div class="importante">
+                    <h4>🎯 Fundamento</h4>
+                    <p>El sujeto delinque <strong>pese a que</strong> la población se encuentra bajo los efectos de una calamidad</p>
+                    <p>Aprovecha el caos, desorden o vulnerabilidad generada por la situación de emergencia</p>
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 Concepto Clave</h4>
+                    <p><strong>"Con ocasión":</strong> Oportunidad o comodidad de tiempo y lugar</p>
+                    <p>El delito se comete aprovechando el contexto de la calamidad</p>
+                </div>
+                
+                <div class="ejemplo">
+                    <strong>📝 Ejemplos:</strong>
+                    <ul class="elementos-list">
+                        <li>Saquear tiendas durante un terremoto</li>
+                        <li>Robar casas evacuadas por inundación</li>
+                        <li>Cometer delitos aprovechando el caos de una protesta masiva</li>
+                        <li>Hurtar pertenencias de víctimas de un naufragio</li>
+                    </ul>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚠️ Cláusula Abierta</h4>
+                    <p>"u otra calamidad o desgracia" permite incluir situaciones no expresamente mencionadas</p>
+                    <p><strong>Ejemplos modernos:</strong> pandemias, apagones masivos, desastres químicos, etc.</p>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°12 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°12</span>
+                    NOCTURNIDAD O DESPOBLADO
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Ejecutar el delito de noche o en despoblado"
+                    <br><br>
+                    <em>"El tribunal tomará o no en consideración esta circunstancia, según la naturaleza y accidentes del delito"</em>
+                </div>
+                
+                <div class="importante">
+                    <h4>⚖️ Característica Especial</h4>
+                    <p>Es una agravante <strong>FACULTATIVA</strong> para el tribunal</p>
+                    <p>El juez decide si la aplica o no según el caso concreto</p>
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'noche-concepto')">Nocturnidad</button>
+                        <button class="tab-button" onclick="openTab(event, 'despoblado-concepto')">Despoblado</button>
+                        <button class="tab-button" onclick="openTab(event, 'noche-fundamento')">Fundamento</button>
+                    </div>
+                    
+                    <div id="noche-concepto" class="tab-content active">
+                        <div class="elementos-box">
+                            <h4>🌙 NOCTURNIDAD</h4>
+                            <p><strong>Concepto:</strong> Período durante el cual la luz solar es tan escasa que predomina la oscuridad</p>
+                        </div>
+                        
+                        <div class="advertencia">
+                            <h4>⚠️ Excepción Importante</h4>
+                            <p><strong>NO opera</strong> si es de noche pero el lugar está <strong>iluminado</strong></p>
+                            <p>Lo relevante es la <strong>oscuridad real</strong>, no la hora del reloj</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong>
+                            <p><strong>SÍ hay nocturnidad:</strong> Robo a las 3 AM en una calle oscura sin alumbrado público</p>
+                            <p><strong>NO hay nocturnidad:</strong> Robo a las 11 PM en un centro comercial completamente iluminado</p>
+                        </div>
+                    </div>
+                    
+                    <div id="despoblado-concepto" class="tab-content">
+                        <div class="elementos-box">
+                            <h4>🏜️ DESPOBLADO</h4>
+                            <p><strong>Concepto:</strong> Lugar solitario en el que:</p>
+                            <ul class="elementos-list">
+                                <li>NO hay habitaciones</li>
+                                <li>NO se espera que lleguen personas que puedan oponerse a la actividad delictiva</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="importante">
+                            <h4>✓ Requisito Subjetivo</h4>
+                            <p>La circunstancia de despoblado debe ser <strong>decisiva</strong> para el sujeto en la comisión del hecho</p>
+                            <p>El agente debe haber elegido ese lugar precisamente por estar despoblado</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplos:</strong>
+                            <ul class="elementos-list">
+                                <li>Camino rural alejado de cualquier vivienda</li>
+                                <li>Bosque o zona no habitada</li>
+                                <li>Paraje solitario en una carretera</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div id="noche-fundamento" class="tab-content">
+                        <div class="importante">
+                            <h4>🎯 Fundamento Común</h4>
+                            <p>El agente aprovecha condiciones más <strong>seguras o favorables</strong> para delinquir:</p>
+                            <ul class="elementos-list">
+                                <li>Mayor dificultad para ser identificado (noche)</li>
+                                <li>Menor posibilidad de auxilio a la víctima (despoblado)</li>
+                                <li>Menor riesgo de ser sorprendido por terceros</li>
+                                <li>Mayor indefensión de la víctima</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AGRAVANTE N°13 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°13</span>
+                    DESPRECIO U OFENSA A LA AUTORIDAD
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Ejecutar el delito en desprecio o con ofensa de la autoridad pública o en el lugar en que se halle ejerciendo sus funciones"
+                </div>
+                
+                <div class="advertencia">
+                    <h4>🚫 Incompatibilidad</h4>
+                    <p>Es <strong>incompatible</strong> con los delitos que implican un ataque directo a la autoridad</p>
+                    <div class="ejemplo">
+                        <strong>📝 Ejemplo:</strong> No se aplica en el delito de "desacato" o "atentado contra la autoridad", porque el desprecio a la autoridad ya es el núcleo del delito mismo
+                    </div>
+                </div>
+                
+                <div class="importante">
+                    <h4>✓ Requisito Subjetivo</h4>
+                    <p>El agente debe <strong>conocer</strong>:</p>
+                    <ul class="elementos-list">
+                        <li>La <strong>calidad de autoridad</strong> de la persona, O</li>
+                        <li>El hecho de que se encuentra en el <strong>lugar donde ejerce sus funciones</strong></li>
+                    </ul>
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 ¿Qué es "Autoridad"?</h4>
+                    <p>Se refiere a <strong>cualquier persona que ejerce funciones de poder más o menos generales</strong></p>
+                    <div class="ejemplo">
+                        <strong>📝 Ejemplos:</strong>
+                        <ul class="elementos-list">
+                            <li>Jueces en tribunales</li>
+                            <li>Policías en sus labores</li>
+                            <li>Alcaldes en municipalidades</li>
+                            <li>Funcionarios públicos en ejercicio de sus cargos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="ejemplo">
+                    <strong>📝 Casos de aplicación:</strong>
+                    <ul class="elementos-list">
+                        <li>Cometer un robo dentro de un tribunal durante una audiencia</li>
+                        <li>Agredir a alguien en presencia de un policía que está de servicio</li>
+                        <li>Falsificar documentos en una oficina pública mientras la autoridad está presente</li>
+                    </ul>
+                </div>
+            </div>
+
+<!-- AGRAVANTE N°17 -->
+            <div class="agravante-card">
+                <h3>
+                    <span class="numero-agravante">Art. 12 N°17</span>
+                    LUGAR DESTINADO AL CULTO
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometer el delito en lugar destinado al ejercicio de un culto permitido en la república"
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 ¿Qué es un "Culto Permitido"?</h4>
+                    <p>Aquel que <strong>NO se oponga</strong> a:</p>
+                    <ul class="elementos-list">
+                        <li>La moral</li>
+                        <li>Las buenas costumbres</li>
+                        <li>El orden público</li>
+                    </ul>
+                    <p style="margin-top: 10px;">Incluye lugares <strong>abiertos y cerrados</strong> (iglesias, capillas, oratorios, templos, mezquitas, sinagogas, etc.)</p>
+                </div>
+                
+                <div class="importante">
+                    <h4>✓ Requisitos</h4>
+                    <ul class="elementos-list">
+                        <li><strong>Falta de respeto</strong> que el ejercicio de un culto impone</li>
+                        <li><strong>Conocimiento</strong> de la naturaleza del lugar</li>
+                    </ul>
+                </div>
+                
+                <div class="ejemplo">
+                    <strong>📝 Ejemplo comparativo:</strong>
+                    <p><strong>SÍ concurre la agravante:</strong> Robar las bancas de una iglesia (se conoce que es un lugar de culto y se falta el respeto debido)</p>
+                    <p><strong>NO concurre:</strong> Robar las bancas de la universidad (no es un lugar destinado al culto)</p>
+                </div>
+            </div>
+
+            <!-- REINCIDENCIA - INTRODUCCIÓN -->
+            <div class="agravante-card" style="border-left-color: #dc3545;">
+                <h3 style="color: #dc3545;">
+                    <span class="numero-agravante" style="background: #dc3545;">Art. 12 N°14, 15 y 16</span>
+                    LA REINCIDENCIA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Concepto General:</strong> Consiste en volver a cometer un delito <strong>después de haber sido condenado anteriormente</strong> por sentencia firme y ejecutoriada por el mismo o por otro delito.
+                </div>
+                
+                <div class="importante">
+                    <h4>🔄 Diferencia con Reiteración</h4>
+                    <p><strong>Reincidencia:</strong> Hay condena previa firme</p>
+                    <p><strong>Reiteración:</strong> NO hay condena (solo comisión de varios delitos)</p>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚠️ Casos Extremos</h4>
+                    <p>Los casos extremos de reincidencia caen en la <strong>habitualidad criminal</strong></p>
+                </div>
+            </div>
+
+            <!-- REINCIDENCIA N°14 -->
+            <div class="agravante-card" style="border-left-color: #dc3545;">
+                <h3 style="color: #dc3545;">
+                    <span class="numero-agravante" style="background: #dc3545;">Art. 12 N°14</span>
+                    REINCIDENCIA IMPROPIA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Cometer el delito mientras se cumple una condena o después de haberla quebrantado y dentro del plazo en que puede ser castigado por el quebrantamiento"
+                </div>
+                
+                <div class="importante">
+                    <h4>📋 Dos Supuestos</h4>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>1️⃣ Mientras se cumple condena:</strong>
+                        <ul class="elementos-list">
+                            <li>Solo aplica a <strong>penas temporales</strong></li>
+                            <li>Supuestos de prolongación en el tiempo de su ejecución</li>
+                            <li>La doctrina entiende que NO aplica a penas pecuniarias (multas)</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                        <strong>2️⃣ Después del quebrantamiento:</strong>
+                        <ul class="elementos-list">
+                            <li>Debe estar dentro del plazo en que puede ser castigado por el quebrantamiento</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚠️ Debate Doctrinario</h4>
+                    <p>Parte de la doctrina aplica la regla del <strong>Art. 63 CP</strong>:</p>
+                    <p>NO sirve como agravante porque el quebrantamiento de condena constituye en sí mismo un delito (doble valoración)</p>
+                </div>
+                
+                <div class="elementos-box">
+                    <h4>🔹 Característica</h4>
+                    <p>Para que opere es <strong>IRRELEVANTE</strong> si el nuevo delito cometido es semejante o no al anterior</p>
+                </div>
+                
+                <div class="ejemplo">
+                    <strong>📝 Ejemplo:</strong> Juan está cumpliendo condena por robo en prisión. Mientras está recluido, agrede a otro recluso. Concurre esta agravante (aunque el nuevo delito sea distinto).
+                </div>
+            </div>
+
+            <!-- REINCIDENCIA N°15 -->
+            <div class="agravante-card" style="border-left-color: #dc3545;">
+                <h3 style="color: #dc3545;">
+                    <span class="numero-agravante" style="background: #dc3545;">Art. 12 N°15</span>
+                    REINCIDENCIA GENÉRICA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Haber sido condenado culpable anteriormente por delitos que la ley señale igual o mayor pena"
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'r15-requisitos')">Requisitos</button>
+                        <button class="tab-button" onclick="openTab(event, 'r15-cambios')">Cambio Legislativo</button>
+                        <button class="tab-button" onclick="openTab(event, 'r15-discusion')">Debates Doctrinarios</button>
+                    </div>
+                    
+                    <div id="r15-requisitos" class="tab-content active">
+                        <div class="importante">
+                            <h4>✓ Exigencias para su Aplicación</h4>
+                            <ul class="elementos-list">
+                                <li><strong>1. Al menos DOS condenas anteriores:</strong>
+                                    <ul style="margin-left: 20px; margin-top: 5px;">
+                                        <li>Deben ser firmes y ejecutoriadas</li>
+                                        <li>Fundamento: principio de inocencia</li>
+                                    </ul>
+                                </li>
+                                <li><strong>2. Delitos con pena igual o mayor:</strong>
+                                    <ul style="margin-left: 20px; margin-top: 5px;">
+                                        <li>Se compara <strong>en abstracto</strong> (la que la ley señale)</li>
+                                        <li>NO en concreto (la efectivamente impuesta)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong> Pedro fue condenado dos veces por hurto (presidio menor en su grado medio). Ahora comete robo con violencia (presidio mayor en su grado mínimo). Concurre la agravante porque las condenas anteriores son por delitos con pena igual o mayor.
+                        </div>
+                    </div>
+                    
+                    <div id="r15-cambios" class="tab-content">
+                        <div class="elementos-box">
+                            <h4>📜 Cambio de Terminología Legal</h4>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: #f8d7da; border-radius: 8px;">
+                                <strong>❌ ANTES decía "castigado":</strong>
+                                <ul class="elementos-list">
+                                    <li>Se exigía que la condena se hubiera <strong>cumplido efectivamente</strong></li>
+                                    <li>NO se aplicaba al que había gozado de <strong>remisión condicional</strong> de la pena</li>
+                                    <li>Razón: la remisión condicional "suspendía la pena"</li>
+                                </ul>
+                            </div>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: #d4edda; border-radius: 8px;">
+                                <strong>✓ AHORA dice "condenado culpable":</strong>
+                                <ul class="elementos-list">
+                                    <li>Basta con que exista <strong>sentencia condenatoria</strong></li>
+                                    <li>NO se requiere cumplimiento efectivo</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="advertencia">
+                            <h4>🚫 Excepción: Amnistía</h4>
+                            <p>Actualmente <strong>NO se aplica</strong> en casos de amnistía</p>
+                            <p><strong>Razón:</strong> La amnistía supone la extinción por completo de la pena y todos sus efectos</p>
+                        </div>
+                    </div>
+                    
+                    <div id="r15-discusion" class="tab-content">
+                        <div class="elementos-box">
+                            <h4>💭 Debate: ¿Qué delitos se incluyen?</h4>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                                <strong>Postura mayoritaria (Cury, Novoa):</strong>
+                                <p>La ley dice "delitos" → se refiere a <strong>cualquier clase de ellos</strong></p>
+                            </div>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                                <strong>Postura restrictiva (Mera):</strong>
+                                <p>Se excluyen:</p>
+                                <ul class="elementos-list">
+                                    <li><strong>Las faltas:</strong> por su escasa gravedad</li>
+                                    <li><strong>Delitos imprudentes:</strong> por su específica tipicidad subjetiva</li>
+                                </ul>
+                                <p style="margin-top: 10px;"><strong>Argumento:</strong> No demuestran peligrosidad, desprecio hacia el derecho ni fracaso disuasivo de la condena</p>
+                            </div>
+                        </div>
+                        
+                        <div class="elementos-box">
+                            <h4>🌍 Debate: Condenas en el Extranjero</h4>
+                            <p><strong>Cury y Novoa:</strong> SÍ deben ser consideradas para aplicar la agravante</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REINCIDENCIA N°16 -->
+            <div class="agravante-card" style="border-left-color: #dc3545;">
+                <h3 style="color: #dc3545;">
+                    <span class="numero-agravante" style="background: #dc3545;">Art. 12 N°16</span>
+                    REINCIDENCIA ESPECÍFICA
+                </h3>
+                
+                <div class="definicion">
+                    <strong>Definición Legal:</strong> "Haber sido condenado culpable anteriormente por delito de la misma especie"
+                </div>
+                
+                <div class="advertencia">
+                    <h4>⚠️ LA MÁS GRAVE</h4>
+                    <p>Para la doctrina, es la más grave de las 3 clases de reincidencia porque:</p>
+                    <ul class="elementos-list">
+                        <li>Basta haber sido condenado <strong>una sola vez</strong> anteriormente</li>
+                        <li>Sin considerar la gravedad de la pena</li>
+                    </ul>
+                </div>
+                
+                <div class="tab-section">
+                    <div class="tabs">
+                        <button class="tab-button active" onclick="openTab(event, 'r16-especie')">Delitos de la Misma Especie</button>
+                        <button class="tab-button" onclick="openTab(event, 'r16-imprudentes')">Delitos Imprudentes</button>
+                        <button class="tab-button" onclick="openTab(event, 'r16-concurso')">Concurso N°15 y N°16</button>
+                    </div>
+                    
+                    <div id="r16-especie" class="tab-content active">
+                        <div class="elementos-box">
+                            <h4>🔹 ¿Qué son "Delitos de la Misma Especie"?</h4>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: #fff3cd; border: 2px solid #ffc107; border-radius: 8px;">
+                                <strong>❌ Criterio Antiguo (Art. 509 CPP derogado):</strong>
+                                <p>Delitos contemplados en un mismo título de la ley penal</p>
+                            </div>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: #d4edda; border: 2px solid #28a745; border-radius: 8px;">
+                                <strong>✓ Criterio Actual (Doctrina):</strong>
+                                <p>Se requieren <strong>DOS requisitos copulativos</strong>:</p>
+                                <ul class="elementos-list">
+                                    <li><strong>1. Mismo bien jurídico protegido</strong></li>
+                                    <li><strong>2. Similares medios de comisión</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplos:</strong>
+                            <p><strong>SÍ son de la misma especie:</strong></p>
+                            <ul class="elementos-list">
+                                <li>Violación y abusos sexuales (mismo bien jurídico: libertad sexual)</li>
+                                <li>Hurto y robo con fuerza (mismo bien jurídico: propiedad + medios similares)</li>
+                            </ul>
+                            
+                            <p style="margin-top: 15px;"><strong>NO son de la misma especie:</strong></p>
+                            <ul class="elementos-list">
+                                <li>Estafa y robo con violencia (aunque ambos afectan la propiedad, los medios son muy distintos)</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="advertencia">
+                            <h4>⚠️ Problema: Delitos Pluriofensivos</h4>
+                            <p>Es debatido cuando se trata de delitos que protegen <strong>más de un bien jurídico</strong></p>
+                            <p><strong>Según Cury:</strong> No hay una regla única para aplicar en estos casos (análisis caso a caso)</p>
+                        </div>
+                    </div>
+                    
+                    <div id="r16-imprudentes" class="tab-content">
+                        <div class="elementos-box">
+                            <h4>💭 Debate: Delitos Imprudentes</h4>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                                <strong>Novoa y Labatut:</strong>
+                                <p>Una condena por delito imprudente <strong>puede</strong> fundamentar reincidencia, cuando la nueva infracción es <strong>también imprudente</strong></p>
+                            </div>
+                            
+                            <div style="margin: 15px 0; padding: 15px; background: white; border-radius: 8px;">
+                                <strong>Cury:</strong>
+                                <p>Acepta la reincidencia en relación con infracciones imprudentes porque:</p>
+                                <ul class="elementos-list">
+                                    <li>La ley NO hace excepción</li>
+                                    <li>La naturaleza de la reincidencia NO es incompatible con el delito imprudente</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong> Juan fue condenado por cuasidelito de homicidio (atropelló a alguien por conducir imprudentemente). Años después, vuelve a atropellar a alguien por imprudencia. ¿Hay reincidencia? Según Cury: SÍ.
+                        </div>
+                    </div>
+                    
+                    <div id="r16-concurso" class="tab-content">
+                        <div class="importante">
+                            <h4>⚖️ Cuando Concurren N°15 y N°16</h4>
+                            <p>Si se cumplen los supuestos para AMBAS agravantes:</p>
+                            <p>La doctrina entiende que debe aplicarse <strong>SOLO UNA de ellas</strong></p>
+                            <p><strong>Fundamento:</strong> Principio <em>non bis in idem</em> (no dos veces por lo mismo)</p>
+                        </div>
+                        
+                        <div class="ejemplo">
+                            <strong>📝 Ejemplo:</strong>
+                            <p><strong>Situación:</strong> Pedro tiene condenas previas por lesiones y hurto. Ahora comete nuevamente hurto.</p>
+                            <p><strong>Análisis:</strong></p>
+                            <ul class="elementos-list">
+                                <li>¿Cumple N°15? Sí (tiene dos condenas anteriores)</li>
+                                <li>¿Cumple N°16? Sí (tiene condena previa por hurto, que es de la misma especie)</li>
+                            </ul>
+                            <p><strong>Solución:</strong> Se aplica solo el N°16 por ser <strong>más específica</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN FINAL: EXTINCIÓN DE LA RP -->
+            <div class="intro-box" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); margin-top: 40px;">
+                <h2>📌 Causales de Extinción de la Responsabilidad Penal</h2>
+                
+                <div class="definicion" style="background: rgba(255,255,255,0.9); color: #333; margin-top: 20px;">
+                    <strong>Concepto de Responsabilidad Penal:</strong>
+                    <p>Estado en que se encuentra el individuo que ha tomado parte en la ejecución de un delito frente a la potestad punitiva estatal, que se traduce en tener que soportar la aplicación de la pena prevista para la ejecución de ese hecho delictivo.</p>
+                </div>
+                
+                <div style="margin-top: 20px; background: rgba(255,255,255,0.9); padding: 20px; border-radius: 10px; color: #333;">
+                    <h4 style="color: #667eea; margin-bottom: 15px;">🎯 Presupuestos de la Responsabilidad Penal</h4>
+                    
+                    <div style="margin: 15px 0;">
+                        <strong style="color: #667eea;">1️⃣ PRIMER PRESUPUESTO: EL DELITO</strong>
+                        <ul class="elementos-list">
+                            <li>Crimen, simple delito, falta</li>
+                            <li>Delito de acción o de omisión</li>
+                            <li>Delito doloso o imprudente</li>
+                            <li>Delito consumado, frustrado o tentado</li>
+                            <li>Autor, cómplice, encubridor</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="margin: 15px 0;">
+                        <strong style="color: #667eea;">2️⃣ SEGUNDO PRESUPUESTO: LA PUNIBILIDAD</strong>
+                        <p style="margin-top: 5px; font-style: italic;">(El delito debe ser punible según la ley)</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <footer>
+            <p>📚 Resumen elaborado en base a apuntes de Derecho Penal II</p>
+            <p>Profesores: Bárbara González, Alanis Reveco y Mauricio Rettig</p>
+            <p style="margin-top: 10px; font-size: 0.9em;">⚖️ Material de estudio - Circunstancias Agravantes del Código Penal</p>
+        </footer>
+    </div>
+
+    <script>
+        function openTab(evt, tabName) {
+            var i, tabcontent, tabbuttons;
+            
+            // Ocultar todo el contenido de las tabs
+            tabcontent = document.getElementsByClassName("tab-content");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].classList.remove("active");
+            }
+            
+            // Remover la clase active de todos los botones
+            tabbuttons = document.getElementsByClassName("tab-button");
+            for (i = 0; i < tabbuttons.length; i++) {
+                tabbuttons[i].classList.remove("active");
+            }
+            
+            // Mostrar el contenido actual y marcar el botón como activo
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+    </script>
+</body>
+</html>
